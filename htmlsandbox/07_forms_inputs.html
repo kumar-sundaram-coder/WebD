@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and Inputs</title>
+</head>
+<body>
+    <!-- action means where do you want to send all the inputs/responses -->
+    <form action="process.php">
+
+    <!-- Text -->
+
+        <div>
+            <hr>
+            <label for="Name">Name</label> <br>
+            <input type="text" name="name" id="name" value="Kumar Sundaram">
+            <hr>
+        </div>
+        
+    <!-- Email -->
+    
+        <div>
+            <label for="Email">Email</label> <br>
+            <input type="email" name="Email" id="Email" placeholder="Enter Your Email">         
+            <hr>
+        </div>
+
+    <!-- Textarea -->
+
+        <div>
+            <label for="Message">Message</label> <br>
+            <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Enter your Message here..."></textarea>
+        </div>
+        <hr>
+    <!-- Select -->
+
+        <div>
+            <label for="Sex">Sex</label>
+            <select name="Sex" id="Sex">
+             <option value="Male" selected>Male</option>
+             <option value="Female" >Female</option>
+             <option value="Other">Other</option>
+            </select>          
+        </div>
+        <hr>
+        
+    <!-- Number -->
+        <div>
+            <label for="Age">Age</label>
+             <input type="number" name="Age" id="Age">
+        </div>
+        <hr>
+
+    <!-- Date/Calender -->
+        <div>
+            <label for="Date of Birth">Date of Birth</label>
+            <input type="date" name="Date of Birth" id="Date of Birth">
+        </div>
+        <hr>
+
+    <!-- Radio -->
+        <div>
+            <label for="Education">Education</label><br>
+            <input type="radio" name="Education" id="Education" value="10th"> 10th <br>
+            <input type="radio" name="Education" id="Education" value="12th"> 12th <br>
+            <input type="radio" name="Education" id="Education" value="UG"> UG <br>
+            <input type="radio" name="Education" id="Education" value="PG"> PG <br>
+        </div>
+        <hr>
+    
+    <!-- Checkbox -->
+    <div>
+        <label for="Hobbies">Hobbies</label> <br>
+        <input type="checkbox" name="Hobbies" id="Hobbies" value="Reading"> Reading <br>
+        <input type="checkbox" name="Hobbies" id="Hobbies" value="Singing"> Singing <br>
+        <input type="checkbox" name="Hobbies" id="Hobbies" value="Dancing"> Dancing <br>
+        <input type="checkbox" name="Hobbies" id="Hobbies" value="Playing Games"> Playing Games <br>
+    </div>
+    <hr>
+
+    <!-- Input Type Submit -->
+    <input type="submit" value="Submit">
+
+    <!-- Button Type Submit -->
+    <!-- <button type="submit"> Submit</button> -->
+
+
+    <!-- Input Type Reset -->
+    <!-- <input type="reset" value="Reset"> -->
+    
+    <!-- Button Type Reset -->
+    <button type="reset">Reset</button>
+
+    <hr>
+
+
+
+    </form>
+
+    
+</body>
+</html>

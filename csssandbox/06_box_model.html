@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model- Margin Padding</title>
+
+    <style>
+      /* CSS Reset */
+
+      * {
+        padding: 0;
+        margin: 0;
+        /* box-sizing is used make the size of box 500px and padding will be inclusive in this width 
+               else it would be 500 px + 120 px*/
+        box-sizing: border-box;
+      }
+
+      .Box {
+        background: violet;
+        border: 3px solid yellow;
+        width: 500px;
+
+        /* padding on all sidess */
+        padding: 20px;
+
+        /* padding per sidess\ */
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+
+        /* Padding Shorthand _ Top, Right, Bottom, Left */
+        padding: 10px, 20px, 10px, 20px;
+
+        /* margin on all sides*/
+        margin: 20px;
+        
+        /* margin per sidess\ */
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+
+        /* margin Shorthand _ Top, Right, Bottom, Left */
+        margin: 10px, 20px, 10px, 20px;
+      }
+
+      .Box h3{
+          padding-bottom: 10px ;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Box">
+      <h3>Box-One</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum est
+        aspernatur quo ea corporis nesciunt veritatis nisi saepe? Nam suscipit,
+        in assumenda beatae sapiente praesentium?
+      </p>
+    </div>
+    <div class="Box">
+      <h3>Box-Two</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum est
+        aspernatur quo ea corporis nesciunt veritatis nisi saepe? Nam suscipit,
+        in assumenda beatae sapiente praesentium?
+      </p>
+    </div>
+  </body>
+</html>

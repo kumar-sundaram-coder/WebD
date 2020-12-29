@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Styling</title>
+
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Navbar Styling */
+        .navbar{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background :#4c6ca0;
+            border-radius: 5px;
+            overflow: auto;
+
+        }
+        .navbar li{
+            float: left;
+        }
+        .navbar li a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+        }
+        .navbar li a:hover{
+            color: white;
+            background: #446190;
+        }
+
+        /* Side Menu Styling */
+        .side-menu{
+            list-style: none;
+            border: 1px chartreuse solid;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+        }
+        .side-menu li{
+            font-size: large;
+            line-height: 2.4em; 
+            border-bottom: 1px black dotted;
+        }
+        .side-menu li:last-child{
+            border-bottom: none;
+        }
+        .side-menu li a{
+            color: deepskyblue;
+            text-decoration: none;
+        }
+
+        .side-menu li a:hover{
+            color: gold;
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li> <a href="#"> Home</a></li>
+        <li> <a href="#"> About</a></li>
+        <li> <a href="#"> Services</a></li>
+        <li> <a href="#"> Contact</a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <ul class="side-menu">
+        <li> <a href="#"> Home</a></li>
+        <li> <a href="#"> About</a></li>
+        <li> <a href="#"> Services</a></li>
+        <li> <a href="#"> Contact</a></li>
+    </ul>
+    
+</body>
+</html>

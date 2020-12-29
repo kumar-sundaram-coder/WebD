@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+
+    <style>
+      /* Element Styling */
+      body {
+        background-color: slategray;
+      }
+
+      p {
+        color: rgb(245, 164, 13);
+      }
+
+      /* p#Welcome-para ... we can use this (with 'p' before) or the one used below*/
+
+      /* #  is for IDs*/
+      #Welcome-para {
+        color: chartreuse;
+      }
+
+      /* .  is for IDs*/
+      .primary-heading {
+        color: rgb(255, 0, 0);
+      }
+
+      /* Multiple Selector */
+      #header,
+      #about {
+        border: 1px solid yellowgreen;
+        padding: 20px;
+        margin-bottom: 3px;
+      }
+
+      /* Nested Selector */
+      #about p {
+        background-color: steelblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h2 class="primary-heading">Welcome</h2>
+      <p id="Welcome-para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        maiores fugiat dolores vero doloremque hic laudantium iste, illum
+        voluptates provident facere temporibus ipsum quae porro.
+      </p>
+    </div>
+
+    <div id="about">
+      <h2>About</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo nisi
+        maiores eos tenetur repellendus nihil doloremque ex libero iste sed,
+        incidunt iusto inventore. Soluta quam reiciendis deleniti architecto
+        sunt molestiae!
+      </p>
+    </div>
+  </body>
+</html>

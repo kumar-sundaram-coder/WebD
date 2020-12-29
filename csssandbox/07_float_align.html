@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float & Align</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .clr {
+        clear: both;   /*To clear the float(Left and Right both)*/
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4em;
+      }
+      .container {
+        max-width: 960px;
+        margin: 30px auto;
+      }
+      .box {
+        background: #f4f4f4;
+        border: 1px solid black;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+      .box p {
+        text-align: left;
+        text-align: right;
+        text-align: center;
+        text-align: justify;
+      }
+
+      #box-2 {
+        float: left;
+        width: 68%;
+      }
+
+      #box-3 {
+        float: right;
+        width: 30%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="box-1" class="box">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio nemo
+          sed in quidem non, labore nisi dolores ut sequi aliquam?
+        </p>
+      </div>
+      <div id="box-2" class="box">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio nemo
+          sed in quidem non, labore nisi dolores ut sequi aliquam?
+        </p>
+      </div>
+      <div id="box-3" class="box">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio nemo
+          sed in quidem non, labore nisi dolores ut sequi aliquam?
+        </p>
+      </div>
+
+      <div class="clr"></div>    <!--To clear the float(Left and Right both)-->
+
+      <div id="box-4" class="box">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio nemo
+          sed in quidem non, labore nisi dolores ut sequi aliquam?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
