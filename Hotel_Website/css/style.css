@@ -99,7 +99,7 @@ p {
   color: #fff;
 }
 
-#navbar h1 {
+#navbar .logo {
   float: left;
   padding-top: 20px;
 }
@@ -124,27 +124,27 @@ p {
 /* Showcase */
 #showcase {
   background: url("../img/showcase.jpg") no-repeat center center/cover;
-  height: 600px;
+  height: 500px;
 }
 #showcase .showcase-content {
   color: white;
   text-align: center;
-  padding-top: 110px;
+  padding-top: 170px;
 }
 
 #showcase .showcase-content h1 {
-  font-size: 40px;
+  font-size: 50px;
   line-height: 1.2em;
 }
 #showcase .showcase-content p {
-  padding-bottom: 29px;
+  padding-bottom: 20px;
   line-height: 1.7em;
 }
 
 /* Home-info */
 
 #home-info {
-  height: 400px;
+  height: 450px;
 }
 #home-info .info-img {
   float: left;
@@ -196,7 +196,7 @@ p {
 
 /* testimonials */
 #testimonials {
-  height: 600px;
+  height: 100%;
   background: url("../img/test-bg.jpg") no-repeat center center/cover;
   padding-top: 60px;
 }
