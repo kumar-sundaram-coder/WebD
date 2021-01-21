@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex basics</title>
+    <title>Flex Align</title>
     <style>
         *{
             box-sizing: border-box;
         }
 
         .flex-container{
+            background: tomato;
             display: flex;
-            /* flex-direction: column; */
-            /* flex-wrap: wrap; */
-
+            flex-direction: row;
+            height: 50vh;
+        
+            /* Cross Axis align */
+            align-items: center;
+        
+            /* Main Axis align */
+            justify-content: center;
+        
         }
 
         .item{
@@ -23,25 +30,18 @@
             margin: 10px;
             text-align: center;
             border-radius: 10px;
-            /* width: 200px; */
-            /* flex: 1 0 200px; */
-            flex: 1;
-        }
-        .item-3{
-            flex: 3;
+             /* flex: 1; */
         }
 
-        /* .item-1{
-            flex-shrink: 8;
+        .item-1{
+            align-self: flex-start;
         }
-        .item-2{
-            flex-grow: 1;
-            flex-basis: 0;
-        }
+
         .item-3{
-            flex-grow: 2;
-            flex-basis: 0;
-        } */
+            align-self: flex-end;
+        }
+
+
 
     </style>
 </head>
