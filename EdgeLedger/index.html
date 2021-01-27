@@ -250,6 +250,7 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
+
     <script>
       const navbar = document.getElementById("navbar");
       let scrolled = false;
@@ -269,6 +270,22 @@
           scrolled = false;
         }
       };
+
+      // Smooth Scrolling
+      $("#navbar a, .btn").on("click", function (e) {
+        if (this.hash !== "") {
+          e.preventDefault();
+
+          const hash = this.hash;
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top - 100,
+            },
+            800
+          );
+        }
+      });
     </script>
   </body>
 </html>

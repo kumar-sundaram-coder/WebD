@@ -15,7 +15,7 @@
   </head>
   <body id="home">
     <header class="hero blog">
-      <div id="navbar" class="navbar">
+      <div id="navbar" class="navbar top">
         <h1 class="logo">
           <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span
           >Ledger
@@ -39,10 +39,11 @@
     <main>
       <section class="post">
         <h2>Blog Post Three</h2>
-                  <p class="meta">
-                      <i class="fas fa-user"></i> Posted by <strong>Kunal Batra</strong> | January 26 2021
-                  </p>
-        <img src="images/blog/blog3.jpg" alt="">
+        <p class="meta">
+          <i class="fas fa-user"></i> Posted by <strong>Kunal Batra</strong> |
+          January 26 2021
+        </p>
+        <img src="images/blog/blog3.jpg" alt="" />
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
           neque voluptates vel iste quas illo obcaecati? At porro voluptas cum
@@ -79,5 +80,26 @@
       </div>
       <p>Copyright &copy; 2021 - EdgeLedger</p>
     </footer>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0px)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled = false;
+        }
+      };
+    </script>
   </body>
 </html>
