@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before After</title>
+    <style>
+      /* .is-required::after {
+        content: "*";
+        padding-left: 2px;
+        color: red;
+      } */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-style: oblique;
+        color: aliceblue;
+        background: #333333;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+      }
+
+      header::before {
+        content: "";
+        background: url("https://source.unsplash.com/daily?water") no-repeat
+          center center/cover;
+        opacity: 0.4;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+      }
+
+      header > h1 {
+        font-size: 4rem;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <label class="is-required" for="name" >Name</label>
+    <input type="text" name="name" id="name"> -->
+
+    <header>
+      <h1>Hello My Friends</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
+        blanditiis cum eveniet temporibus a deleniti tempora inventore, quisquam
+        aut perspiciatis dignissimos numquam odio non. Voluptates sequi commodi
+        dolor deserunt aperiam!
+      </p>
+    </header>
+
+    <section>
+      <h3>How are you all ?????</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi omnis
+        natus perspiciatis quae fugiat perferendis iure atque sint dolor
+        suscipit, cum minus et recusandae rem quidem, ad nobis aliquid tempora!
+      </p>
+    </section>
+  </body>
+</html>

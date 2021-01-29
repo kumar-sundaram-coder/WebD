@@ -4,6 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nth Child</title>
+
+    <style>
+      li {
+        padding: 4px;
+        margin: 3px;
+        list-style: none;
+      }
+
+      /* First Child */
+      li:first-child {
+        background: brown;
+        color: aqua;
+      }
+
+      /* Last Child */
+      li:last-child {
+        background: darkviolet;
+        color: aqua;
+      }
+
+      /* 3rd Child */
+      li:nth-child(3) {
+        color: aquamarine;
+        background: olivedrab;
+      }
+      /* Every 3 Child */
+      li:nth-child(3n + 0) {
+        color: aquamarine;
+        background: olivedrab;
+      }
+      /* Every 3 Child from 7th position onwards */
+      /* Here '+7' means off-set of 7 */
+      li:nth-child(3n + 7) {
+        color: black;
+        background: lime;
+      }
+      /* Every odd Child */
+      li:nth-child(odd){
+          background: #cccccc;
+          color: black;
+      }
+      /* Every Even Child */
+      li:nth-child(even){
+          background: black;
+          color: #cccccc;
+      }
+
+
+    </style>
   </head>
-  <body></body>
+  <body>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+      <li>Item 10</li>
+      <li>Item 11</li>
+      <li>Item 12</li>
+      <li>Item 13</li>
+      <li>Item 14</li>
+      <li>Item 15</li>
+      <li>Item 16</li>
+      <li>Item 17</li>
+      <li>Item 18</li>
+      <li>Item 19</li>
+      <li>Item 20</li>
+    </ul>
+  </body>
 </html>
