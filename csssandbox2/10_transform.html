@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      body {
+        background-color: #333333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .box {
+        background-color: aliceblue;
+        width: 150px;
+        height: 150px;
+        /* transform: rotate(25deg);
+        transform: skew(25deg);
+        transform: scale(2); */
+
+        transition: all 0.5s ease-in-out;
+      }
+      .box:hover {
+        /* transform: rotate(360deg); */
+        /* transform: skew(60deg); */
+        /* transform: scale(2); */
+        /* transform: translateX(150px); */
+        /* transform: translateY(150px); */
+        /* transform: translate(150px,150px); */
+        transform: translate3d(150px, 150px, 150px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

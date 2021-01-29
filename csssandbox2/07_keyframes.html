@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyframes</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background: #333333;
+      }
+      .box {
+        background: snow;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        /* adding the animations seperately */
+
+        /* animation-name: animate1;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out; */
+
+        /* 1 line for Animation */
+        animation: animate1 5s ease-in-out 2s 1 alternate forwards;
+      }
+      @keyframes animate1 {
+        from {
+          top: 0;
+          left: 0;
+          background-color: snow;
+          width: 100px;
+        }
+        to {
+          top: 300px;
+          left: 200px;
+          background-color: red;
+          width: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
