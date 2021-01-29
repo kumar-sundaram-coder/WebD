@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,4 +59,66 @@
         </div>
     </div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Align</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .flex-container{
+            background: tomato;
+            display: flex;
+            flex-direction: row;
+            height: 50vh;
+        
+            /* Cross Axis align */
+            align-items: center;
+        
+            /* Main Axis align */
+            justify-content: center;
+        
+        }
+
+        .item{
+            background: #f4f4f4;
+            border: #cccccc solid 2px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px;
+             /* flex: 1; */
+        }
+
+        .item-1{
+            align-self: flex-start;
+        }
+
+        .item-3{
+            align-self: flex-end;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="item item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item item-3">
+            <h3>Item 3</h3>
+        </div>
+    </div>
+</body>
+>>>>>>> 462b12b8e452004809f4e6c5f44275ba06052555
 </html>

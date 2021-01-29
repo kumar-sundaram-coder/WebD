@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   /* display: none; */
 }
@@ -63,3 +64,70 @@ body {
 }
 
 
+=======
+body {
+  /* display: none; */
+}
+
+#navbar .logo {
+  float: none;
+  text-align: center;
+}
+
+#navbar ul,
+#navbar ul li {
+  float: none;
+}
+#navbar ul li a {
+  padding: 6px;
+  border-bottom: #444444 dotted 1px;
+}
+/* showcase */
+#showcase {
+    height: 100%;
+  }
+  #showcase .showcase-content {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+  
+#home-info {
+    height: 550px;
+}
+#home-info .info-img {
+    display: none;
+}
+#home-info .info-content {
+    float: none;
+    width: 100%;
+}
+
+/* boxes */
+
+.box {
+    float: none;
+    width: 100%;
+}
+
+/* about-info */
+
+#about-info .info-right,
+#about-info .info-left {
+    float: none;
+    width: 100%;
+}
+
+#about-info .info-right {
+    margin-top: 30px;
+}
+#about-info .l-heading {
+    text-align: center;
+}
+
+/* contact */
+#contact-info .box{
+    border-bottom: #444444 dotted 1px;
+}
+
+
+>>>>>>> 462b12b8e452004809f4e6c5f44275ba06052555
