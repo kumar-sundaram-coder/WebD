@@ -17,8 +17,7 @@
 }
 
 .menu-wrap .hamburger {
-  
-    position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
@@ -26,6 +25,5 @@
   width: 60px;
   height: 60px;
   padding: 1rem;
-  background: black;
-
+  background: var(--primary-color);
 }
