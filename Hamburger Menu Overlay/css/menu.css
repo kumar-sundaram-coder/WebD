@@ -80,18 +80,18 @@
 }
 
 /* Show Menu */
-.menu-wrap .toggler:checked ~ .menu{
+.menu-wrap .toggler:checked ~ .menu {
   visibility: visible;
 }
-.menu-wrap .toggler:checked ~ .menu > div{
+.menu-wrap .toggler:checked ~ .menu > div {
   transform: scale(1);
-  transition-duration: var(--menu-speed); 
+  transition-duration: var(--menu-speed);
 }
-.menu-wrap .toggler:checked ~ .menu > div>div{
+.menu-wrap .toggler:checked ~ .menu > div > div {
   opacity: 1;
   transition: all 0.4s ease 0.4s;
 }
-  .menu-wrap .menu {
+.menu-wrap .menu {
   position: fixed;
   top: 0;
   left: 0;
