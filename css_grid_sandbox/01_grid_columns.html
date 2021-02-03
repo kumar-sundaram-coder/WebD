@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Columns</title>
+
+    <style>
+      .grid {
+        display: grid;
+        /* grid-template-columns: 200px 200px 200px; */
+        /* grid-template-columns: 200px auto 200px; */
+        /* grid-template-columns: auto auto auto; */
+        /* grid-template-columns: repeat(3,200px); */
+        /* grid-template-columns: repeat(3,auto); */
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        grid-template-columns: repeat(3, 1fr);
+
+        grid-gap: 1rem;
+      }
+      .item {
+        padding: 3rem;
+        border: #cccccc 1px solid;
+        background: #f4f4f4;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-align: center;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+    </div>
+    <main>
+      <section>
+        <h3>Welcome to Our Website</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+          illo officia aut vel laboriosam obcaecati modi quibusdam accusantium
+          veritatis, sed placeat nulla ut, aspernatur accusamus rem et quaerat
+          maiores magni.
+        </p>
+      </section>
+      <aside>
+        <h3>Hello</h3>
+        <p>This is the Sidebar of Our Website. Enjoy!.</p>
+      </aside>
+    </main>
+  </body>
+</html>
