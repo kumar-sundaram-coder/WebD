@@ -103,3 +103,11 @@ h6 {
   color: #777;
   margin-right: 0.5rem;
 }
+
+/* Showcase */
+#showcase {
+  color: #ffffff;
+  background: #333333;
+  padding: 2rem;
+  position: relative;
+}
