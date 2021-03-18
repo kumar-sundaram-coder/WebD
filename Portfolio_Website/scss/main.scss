@@ -4,9 +4,16 @@ $main-color: #ffbc00;
 $light-color: #f4f4f4;
 $medium-color: #ccc;
 $dark-color: #333;
-$bg-img: url("../img/showcase.jpeg");
+$bg-image: url("../img/showcase.jpg");
 
-// General Styles or Utilities
+// Utilities
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+// General Styles
 * {
   margin: 0%;
   padding: 0%;
@@ -37,4 +44,52 @@ h6 {
 }
 img {
   width: 100%;
+}
+
+//Logo
+#logo {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+//Main Nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  ul {
+    display: flex;
+  }
+  li {
+    padding: 1rem 1.5rem;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &.current{
+        border-color: $main-color;
+
+    }
+    &:hover {
+        border-color: $medium-color;
+      }
+  }
+}
+
+// Header
+#header {
+  &-home {
+    background: $bg-image no-repeat center right / cover;
+    height: 100vh;
+    color: #fff;
+  }
+  &-inner {
+  }
 }
