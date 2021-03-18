@@ -73,13 +73,12 @@ img {
     padding-bottom: 0.5rem;
     transition: border-color 0.5s;
 
-    &.current{
-        border-color: $main-color;
-
+    &.current {
+      border-color: $main-color;
     }
     &:hover {
-        border-color: $medium-color;
-      }
+      border-color: $medium-color;
+    }
   }
 }
 
