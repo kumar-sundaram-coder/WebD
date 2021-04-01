@@ -39,32 +39,40 @@
         <h2 class="section-title">Contact Me</h2>
         <div class="bottom-line"></div>
         <p class="lead">Here is how you can reach me</p>
-        <form>
+        <form method="POST" data-netlify="true" data-netlify-recaptcha="true">
           <div class="text-fields">
             <input
               type="text"
               class="text-input name-input"
               placeholder="Name"
+              name="name"
             />
             <input
               type="text"
               class="text-input subject-input"
               placeholder="Subject"
+              name="subject"
             />
             <input
               type="email"
               class="text-input email-input"
               placeholder="Email"
+              name="email"
             />
             <input
               type="text"
               class="text-input phone-input"
               placeholder="Phone Number"
+              name="phone"
             />
             <textarea
               class="text-input message-input"
               placeholder="Enter Message"
+              name="message"
             ></textarea>
+            <div class="my-2">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
           </div>
           <button type="submit" class="btn-dark">Submit</button>
         </form>
@@ -96,9 +104,9 @@
 
     <!-- Section C: Tagline -->
     <section id="contact-c" class="text-center bg-main py-4">
-        <div class="container">
-            <h1>Let's Start your New Project</h1>
-        </div>
+      <div class="container">
+        <h1>Let's Start your New Project</h1>
+      </div>
     </section>
     <!-- Footer -->
     <div id="main-footer">
