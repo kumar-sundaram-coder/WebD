@@ -553,10 +553,9 @@ img {
     }
   }
 
-  &-c{
-    h1{
+  &-c {
+    h1 {
       font-size: 4rem;
-
     }
   }
 }
@@ -588,3 +587,7 @@ img {
     }
   }
 }
+
+// Import Media Querries
+
+@import "media";
