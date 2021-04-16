@@ -1,6 +1,6 @@
-const items = document.querySelectorAll('#timeline li');
+const items = document.querySelectorAll("#timeline li");
 
-const isInViewport = el => {
+const isInViewport = (el) => {
   const rect = el.getBoundingClientRect();
   return (
     rect.top >= 0 &&
@@ -12,13 +12,13 @@ const isInViewport = el => {
 };
 
 const run = () =>
-  items.forEach(item => {
+  items.forEach((item) => {
     if (isInViewport(item)) {
-      item.classList.add('show');
+      item.classList.add("show");
     }
   });
 
 // Events
-window.addEventListener('load', run);
-window.addEventListener('resize', run);
-window.addEventListener('scroll', run);
+window.addEventListener("load", run);
+window.addEventListener("resize", run);
+window.addEventListener("scroll", run);
