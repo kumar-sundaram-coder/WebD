@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page | MyWebsite</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and ( max-width:768px )"
+      href="css/mobile.css"
+    />
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="second-container">
+        <img alt="" class="avatar" src="img/image_1.png" />
+        <ul class="list">
+          <li id="li-1" class="current"><a href="#">Log In</a></li>
+          <li id="li-2" class=""><a href="#">Sign Up</a></li>
+          <li id="li-3" class=""><a href="#">Reset</a></li>
+        </ul>
+        <!-- login -->
+        <div class="login op-1">
+          <div class="login-form-wrap">
+            <h2>Log In</h2>
+            <p>Log In to Your Account</p>
+            <form id="login-form">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" />
+              </div>
+
+              <input
+                type="checkbox"
+                class="checkbox"
+                name="checkbox"
+                value=""
+              />
+              <label for="checkbox">Remember me</label>
+              <input type="submit" value="Log In" />
+            </form>
+          </div>
+        </div>
+        <!-- signup -->
+        <div class="signup op-0">
+          <div class="signup-form-wrap">
+            <h2>Sign Up</h2>
+            <p>Please fill in this form to create an account!</p>
+            <form id="signup-form">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" />
+              </div>
+              <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" name="pasword2" id="password2" />
+              </div>
+              <input
+                type="checkbox"
+                class="checkbox"
+                name="checkbox"
+                value=""
+              />
+              <label for="checkbox" id="bottom-text">
+                By clicking the Sign Up button, you agree to our
+                <a href="#" class="T">Terms & Conditions</a> and
+                <a href="#" class="T">Privacy Policy</a>
+              </label>
+              <input type="submit" value="Sign Up" />
+            </form>
+          </div>
+        </div>
+        <!-- reset password -->
+        <div class="resetpassword op-0">
+          <div class="resetpassword-form-wrap">
+            <h2>Retrieve Password</h2>
+            <p>Enter your email and to receive instructions</p>
+
+            <form id="resetpassword-form">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" />
+              </div>
+              <input type="submit" value="Send" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
