@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0645962c25.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='style.css') }}"
+    />
+    <script src="{{ url_for('static',filename='typewriter.js') }}"></script>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <title>Movie Reviewster | Search Movies</title>
+  </head>
+
+
+  <body style="font-family: 'Courgette', cursive">
+   
+    <div class="searchmovies-bg">
+    <!-- Nav-bar -->
+    <nav id="main-nav">
+      <div class="container">
+        <h1 class="logo"><a href="/"> Movie Reviewster</a></h1>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Introduction -->
+    <section>
+      <div class="intro-searchmovie">
+        <h3>
+          Explore Some 
+          <span
+             id="movie-category"
+            class="txt-type"
+            data-wait="3000"
+            data-words='["Action", 
+            "Comedy",
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Romance",
+            "Thriller",
+            "Western" ]'
+          ></span> Movies
+        </h3>
+      </div>
+    </section>
+
+  </div>
+    <!-- Search Movies -->
+
+    <section class="search-movies flex-columns">
+      <div class="row">
+        <div class="column">
+          <div class="column-1">
+            <img src="static/searchmovies-bg.jpg" alt="img" />
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-2" id="searchmovies-right">
+            <h3>Search Movies</h3>
+            <h4>Search your favourite Movie from Our Database</h4>
+            <div class="search">
+            <form action="/findMovie" method="post">
+              <input
+                type="search"
+                name="searchMovie"
+                id="search"
+                class="search-box"
+                placeholder="Enter Movie Name Here..."
+              />
+              <button type="submit" id="submit" class="btn">
+                <i class="fas fa-search fa-2x"></i>
+              </button>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Search Results -->
+    {% if foundMovie: %}
+    <section id="search-results">
+      <div class="search-results-container">
+        <h3>Search Results</h3>
+        {% if foundMovie=="notFound": %}
+        <div>
+          &#128533; Sorry for the inconvenience! &#128533; This movie is not yet added. Please watch this movie and contribute to us by adding this movie with a review &#128526;
+        </div>
+        {% else %}
+        <div>
+          <h4 style="font-size: 2.2rem;">{{foundMovie["movieName"]}}</h4>
+          <p>Total reviews: {{foundMovie["totalReviews"]}}</p>
+          <p>Positive Reviews: {{foundMovie["positiveReviews"]}}</p>
+          <p>Negative Reviews: {{foundMovie["totalReviews"]-foundMovie["positiveReviews"]}}</p>
+          <p style=" margin-bottom: 3rem;">Rating:
+            <br>
+          {% for i in range(foundMovie["rating"]): %}
+          <span style="font-size:200%;color: black;">&starf;</span>
+          {% endfor %}
+
+          {% for i in range(5-foundMovie["rating"]): %}
+          <span style="font-size:200%;color:black;">&star;</span>
+          {% endfor %}
+          </p>
+        <!-- </br> -->
+          <h4>Reviews are:- </h4>
+          <ol>
+            {% for rev in foundMovie["reviewsList"]: %}
+              <li style="margin-bottom: 1rem;">{{rev["name"]}} :- {{rev["review"]}}</li>
+            {% endfor %}
+          </ol>
+        {% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- Movie List -->
+    <section id="movie-list">
+      <div class="movie-list-container">
+        <h3>Movies List</h3>
+        <h4>OR Choose your movie from this List!</h4>
+        <form method="post" action="/findMovieFromList" class="movie-show-list">
+          {% for movie in movieList: %}
+          <button class="movie-list-btn" name="searchMovie" type="submit" value={{movie['id']}}>{{movie['movieName']}}</button>
+          {% endfor %}
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="http://facebook.com" target="_blank"
+          ><i class="fab fa-facebook fa-2x"></i
+        ></a>
+        <a href="http://instagram.com" target="_blank"
+          ><i class="fab fa-instagram fa-2x"></i
+        ></a>
+        <a href="http://twitter.com" target="_blank"
+          ><i class="fab fa-twitter fa-2x"></i
+        ></a>
+        <a href="http://linkedin.com" target="_blank"
+          ><i class="fab fa-linkedin fa-2x"></i
+        ></a>
+        <a href="http://youtube.com" target="_blank"
+          ><i class="fab fa-youtube fa-2x"></i
+        ></a>
+      </div>
+      <p>Copyright &copy; 2021 - Movie Reviewster</p>
+      <p>Created by: Himanshu Maurya & Kumar Sundaram</p>
+    </footer>
+  </body>
+</html>

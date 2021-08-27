@@ -83,6 +83,7 @@ body {
   to {
     transform: translateY(0px);
   }
+  display: ;
 }
 
 @keyframes para {

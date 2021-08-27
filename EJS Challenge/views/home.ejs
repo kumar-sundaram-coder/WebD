@@ -1,0 +1,20 @@
+<%- include("partials/header"); -%>
+<h1>HOME</h1>
+<p><%=startingContentHome%></p>
+
+<% for (let obj of postsArray){ %>
+<h1><%=obj.title%></h1>
+
+<% let truncatedString = obj.post.substring(0,100)+"..."; %>
+
+<p>
+  <%=truncatedString %>
+  <a href="/posts/<%=obj.title %>">Read More</a>
+</p>
+<% } %>
+
+<!-- postsArray.forEach((element) => { 
+      console.log(element.title); 
+     });  -->
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0645962c25.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='style.css') }}"
+    />
+
+    <script src="{{ url_for('static',filename='typewriter.js') }}"></script>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <title>Movie Reviewster | Home</title>
+  </head>
+
+  <body>
+    <div class="intro-bg">
+      <!-- Nav-bar -->
+      <nav id="main-nav">
+        <div class="container">
+          <h1 class="logo"><a href="/"> Movie Reviewster</a></h1>
+          <ul>
+            <li><a class="current" href="/">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Introduction -->
+      <section>
+        <div class="intro">
+          <h3>
+            What is
+            <span
+              class="txt-type"
+              data-wait="3000"
+              data-words='[" Movie Reviewster !?"]'
+            ></span>
+          </h3>
+          <p>
+            This is a platform where you can search for movies and find their
+            reviews before watching those movies, so that your time won't be
+            wasted and you can pick the best movie to watch next. After watching
+            any movie, you could also add your reviews to the website. With the
+            help of machine learning and deep learning your review would be
+            automatically classified as positive or negative. And then
+            accordingly the previous rating of that particular movie would be
+            changed after your review.Your review plays an important role in
+            deciding the rating of a movie, so go to the add review page and add
+            a review now. This will help others to know how was the movie before
+            actually watching that movie.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Search Movies -->
+
+    <section class="search-movies flex-columns">
+      <div class="row">
+        <div class="column">
+          <div class="column-1">
+            <img src="static/Movies_grid_sm@3x.png" alt="img" />
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-2 bg-primary">
+            <h3>Search Movies</h3>
+            <h4>Search your favourite Movie from Our Database</h4>
+            <a href="searchMovies"
+              ><i class="fas fa-chevron-right"></i> Search Movies</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add Review -->
+
+    <section id="add-review" class="add-review flex-columns flex-reverse">
+      <div class="row">
+        <div class="column">
+          <div class="column-1">
+            <img src="static/moviies_grid.jpeg" alt="review img" />
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-2 bg-secondary">
+            <h3>Add Your Own Review!</h3>
+            <h4 style="text-align: left;">
+              You can add your review of your favourite movie or the last movie
+              you watched!
+            </h4>
+            <a href="addReview"
+              ><i class="fas fa-chevron-right"></i> Add Review</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="http://facebook.com" target="_blank"
+          ><i class="fab fa-facebook fa-2x"></i
+        ></a>
+        <a href="http://instagram.com" target="_blank"
+          ><i class="fab fa-instagram fa-2x"></i
+        ></a>
+        <a href="http://twitter.com" target="_blank"
+          ><i class="fab fa-twitter fa-2x"></i
+        ></a>
+        <a href="http://linkedin.com" target="_blank"
+          ><i class="fab fa-linkedin fa-2x"></i
+        ></a>
+        <a href="http://youtube.com" target="_blank"
+          ><i class="fab fa-youtube fa-2x"></i
+        ></a>
+      </div>
+      <p>Copyright &copy; 2021 - Movie Reviewster</p>
+      <p>Created by: Himanshu Maurya & Kumar Sundaram</p>
+    </footer>
+  </body>
+</html>

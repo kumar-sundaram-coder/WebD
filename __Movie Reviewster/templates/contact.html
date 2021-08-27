@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0645962c25.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='style.css') }}"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <title>Movie Reviewster | Contact</title>
+  </head>
+
+  <body style="font-family: 'Courgette', cursive">
+    <!-- Nav-bar -->
+    <nav id="main-nav">
+      <div class="container">
+        <h1 class="logo"><a href="/"> Movie Reviewster</a></h1>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a class="current" href="contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contact Form -->
+    <div id="contact-form">
+      <div class="container">
+        {% if submitted: %}
+        <p style="text-align: center;padding-top: 5rem;padding-bottom: 5rem;">&#128526; Thankyou very much for your feedback &#128519;!!!</p>
+        {% else %}
+        <h1 class="l-heading"><span class="text-primary">Contact </span> Us</h1>
+        {% if isEmpty: %}
+        <p>***Please fill all the input fields***</p>
+        {% endif %}
+        <p>Please fill out the form below to Contact us</p>
+        <form action="/feedbackSubmitted" method="post">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Type Your message Here..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="http://facebook.com" target="_blank"
+          ><i class="fab fa-facebook fa-2x"></i
+        ></a>
+        <a href="http://instagram.com" target="_blank"
+          ><i class="fab fa-instagram fa-2x"></i
+        ></a>
+        <a href="http://twitter.com" target="_blank"
+          ><i class="fab fa-twitter fa-2x"></i
+        ></a>
+        <a href="http://linkedin.com" target="_blank"
+          ><i class="fab fa-linkedin fa-2x"></i
+        ></a>
+        <a href="http://youtube.com" target="_blank"
+          ><i class="fab fa-youtube fa-2x"></i
+        ></a>
+      </div>
+      <p>Copyright &copy; 2021 - Movie Reviewster</p>
+      <p>Created by: Himanshu Maurya & Kumar Sundaram</p>
+    </footer>
+  </body>
+</html>
